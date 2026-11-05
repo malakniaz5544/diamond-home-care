@@ -1,0 +1,925 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><link rel="manifest" href="manifest.json"><link rel="apple-touch-icon" href="icon-180.png"><title>Diamond Home Care Products</title>
+<meta name="theme-color" content="#0a1f44"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="apple-mobile-web-app-title" content="Diamond"><link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAEzUlEQVR4nO3bO3IUUQxGYZnQGyB0EbATE7MBQhZATkxOTMwGHLMUNkPQVeN2zWjo59Uv6XwRGd13zpXwg4fHp2cDbnkX/QDQRRxwEQdcxAEXccBFHHARB1zEARdxwEUccBEHXMQBF3HARRxwEQdcxAEXccBFHHARB1zEARdxwEUccBEHXMQBF3HARRxwEQdcxPHG118v0Y8ghDheTWX8ePkT/SAqHvhf9vZ2YHx4/zj94fvnT0GPo4LJ4a4SRkj3OO7/I6N5H33XipfFZa3M9VwxTSfH2q9Keo6QjnFs+3q1YR+91sqSLG6ulbk+K6bR5DjqG1x9RkiXOI791meTPuqvlbVZ/HetzNVeMcUnx9k/K6k9QirHMeanaIX7qLlW9mSxaq3M1VsxBSdH1I/d642QanHE/kJGsT7qrJWjsti8VuZqrJgik0PtN7hqjJAKcaiVMSnQR+61ckYWh6yVubwrJvHk0BwY1/KOkKxxZCljkrSPfGvl7CwOXytzuVZMssmRa2BcyzVCMsWRvYxJoj5yrJWRWZy6Vub0V0yCyVFjYFzTHyHqcVQtYyLeh+5aicpi2FqZ01wxopOj9sC4pjlCFOPoVsZEsA+ttaKQRchamdNZMUKTQ6EMBTojRCUOypgT6SN+rahlEb5W5mJXTPDkUCtDTewIiYyDMpYI7CNmrShnIbVW5savmIDJoVyGsvEjZHQclLHH4D7GrZUsWciulbkxK2bQ5MhSRhZjRsi4yfHx2+8xf1EHf39+GfC3qHyHFILGxTEm9g6GneTQyUEf+408Q9YKXKPjYHjsMfj0AiYHfWwz/txYK3DFxMHwWCvkxMImB30sF3VWrBW4IuNgeCwReEpMDriC42B43Bd7PvGTgz484ScTHwdkScQRfkUEKZyJRBymcRY6RE5DJQ4IEopD5LqE0zkHoThM6VyiSJ2AVhyQIheH1NUZTO3d5eIwvTMaQ/CtFeOACNE4BK/RqTTfVzQOUz2vM8i+qW4cCCcdh+yVOpDyO0rHYdpnt5/426nHgUAJ4hC/Xpvpv1eCOBAlRxz6l2ytFG+UIw5LcpoLZXmXNHFgvExxZLlw9yV6i0xxWKqTvSnX8yeLAyPliyPX5ZtL9+T54rCEp2w5nzllHBgjaxy5LmKup73IGoflOfEsz3ktcRw4W+449C+l/hPekTsO0z595WdbIn0cOE+FODQvqOZTrVIhDtP7JNSeZ5siceAMdeLQuaw6T7JTnThM41NReIajlIoDx6oWR+zFrTQ2rF4cOFDBOKKub7GxYSXjsIjPqV4ZVjUOHKJsHCOvcsmxYYXjsFGfWdUyrHYc2Kl4HGdf68Jjw8rHYWd+frXLsA5xYLMWcZxxxcuPDWsShx39WXYow/rEgQ0axXHUdW8yNqxVHHbE59qnDOsWB1ZpF8eeq99qbFjDOGzrZ9ytDOsZBxZqGsfaMdBwbFjbOLBE3ziWD4OeY8M6x2HLPvW2ZVjzOHBf9zjuD4bOY8OIw/wCmpdhxIE7iMPs1pBgbBhxXMxroIwJccBFHK+mgcHYuHh4fHqOfgaIYnLARRxwEQdcxAEXccBFHHARB1zEARdxwEUccBEHXMQBF3HARRxwEQdcxAEXccBFHHARB1zEARdxwEUccP0DGuNgVRDVsdEAAAAASUVORK5CYII="><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>
+:root{--navy:#0a1f44;--navy2:#13306b;--dia:#2f8fe8;--dia2:#8fd0ff;--bg:#eef3fa;--card:#fff;--tx:#14213d;--mut:#6b7a96;--sil:#d5dce8;--ok:#16a06b;--bad:#d64550;--warn:#e8a317}
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme=light]){--bg:#0b1426;--card:#122041;--tx:#e8eefb;--mut:#93a3c4;--sil:#26375f}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--tx);font:14px/1.45 "Segoe UI",system-ui,sans-serif}
+#app{display:flex;min-height:100vh}
+nav{width:236px;background:linear-gradient(180deg,var(--navy),var(--navy2));color:#cfe0ff;padding:16px 10px;position:sticky;top:0;height:100vh;overflow:auto;flex:none}
+.logo{display:flex;gap:10px;align-items:center;padding:4px 8px 14px;border-bottom:1px solid #ffffff22;margin-bottom:10px}
+.logo b{display:block;color:#fff;letter-spacing:3px;font-size:17px}.logo small{font-size:9px;color:var(--dia2)}
+nav a{display:block;padding:9px 12px;border-radius:10px;color:#cfe0ff;cursor:pointer;margin:2px 0}
+nav a:hover{background:#ffffff14}nav a.on{background:linear-gradient(90deg,var(--dia),#1c6fc4);color:#fff}
+main{flex:1;padding:22px 26px;min-width:0}
+h1{margin:0 0 16px;font-size:22px;color:var(--navy2)}@media(prefers-color-scheme:dark){h1{color:var(--dia2)}}
+.g{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));margin-bottom:16px}
+.g2{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));margin-bottom:16px}
+.c{background:var(--card);border-radius:16px;padding:16px;box-shadow:0 2px 12px #0a1f4414;border:1px solid var(--sil);overflow-x:auto}
+.st small{color:var(--mut);display:block}.st b{font-size:22px;color:var(--navy2)}@media(prefers-color-scheme:dark){.st b{color:#fff}}
+.st{border-top:4px solid var(--dia)}
+table{border-collapse:collapse;width:100%}th,td{padding:7px 8px;text-align:left;border-bottom:1px solid var(--sil);white-space:nowrap}
+th{font-size:11px;text-transform:uppercase;color:var(--mut);letter-spacing:.5px}td.r,th.r{text-align:right}
+input,select,textarea{width:100%;padding:8px 10px;border:1px solid var(--sil);border-radius:9px;background:var(--bg);color:var(--tx);font:inherit}
+td input,td select{min-width:70px}label{font-size:11px;color:var(--mut);display:block;margin-bottom:2px}
+.f{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));margin-bottom:12px}
+button{background:linear-gradient(90deg,var(--dia),#1c6fc4);color:#fff;border:0;border-radius:10px;padding:9px 16px;cursor:pointer;font:inherit;font-weight:600}
+button.s{background:var(--sil);color:var(--tx)}button.d{background:var(--bad)}button.x{padding:4px 9px;font-size:12px}
+.bar{display:flex;gap:6px;align-items:flex-end;height:130px}.bar div{flex:1;text-align:center;font-size:10px;color:var(--mut)}
+.bar i{display:block;background:linear-gradient(var(--dia2),var(--dia));border-radius:6px 6px 0 0;min-height:2px;margin-bottom:3px}
+.pill{padding:2px 9px;border-radius:20px;font-size:11px;font-weight:700}.Paid,.ok{background:#16a06b22;color:var(--ok)}.Unpaid,.low{background:#d6455022;color:var(--bad)}.Partial{background:#e8a31733;color:#a8770a}.cancelled{background:#8883;color:var(--mut)}
+#modal{position:fixed;inset:0;background:#0a1f44cc;display:none;align-items:flex-start;justify-content:center;overflow:auto;padding:24px;z-index:9}
+#doc{background:#fff;color:#111;width:760px;max-width:100%;padding:0;border-radius:18px;overflow:hidden}#doc table th{color:#555}
+.dh{display:flex;gap:12px;align-items:center;border-bottom:3px solid #13306b;padding-bottom:10px;margin-bottom:12px}.dh b{font-size:20px;letter-spacing:2px;color:#0a1f44;display:block}.dh small{color:#555}
+#doc .ib{background:linear-gradient(100deg,#0a1f44,#1a3a8a 60%,#2a6bc4);color:#fff;padding:20px 24px;display:flex;gap:14px;align-items:center}
+#doc .ib b{font:600 28px Georgia,serif;letter-spacing:1px;display:block;color:#fff}#doc .ib small{letter-spacing:4px;font-size:11px;display:block;color:#fff}#doc .ib i{font-size:12px}
+#doc .ib2{padding:18px 24px;display:flex;justify-content:space-between;align-items:flex-end;border-bottom:1px solid #e3e8f1}#doc h2{margin:0;color:#13306b;font-size:26px}
+#doc .bx{background:#eceff8;border-radius:16px;padding:14px 18px;margin:12px 24px}#doc .bx small{color:#667;display:block;font-size:11px;letter-spacing:1px}
+#doc .it th{background:#13306b;color:#fff;padding:9px 8px;font-size:11px}#doc .it td{padding:9px 8px;border-bottom:1px solid #e3e8f1}
+#doc .tr{display:flex;justify-content:space-between;padding:7px 0;border-bottom:1px solid #e3e8f1;color:#445}#doc .tr.h{background:#d9e8fb;border:0;border-radius:12px;padding:10px 16px;color:#13306b;font-weight:700;margin:4px 0}
+#doc .sg{display:flex;gap:40px;padding:44px 24px 10px}#doc .sg div{flex:1;border-top:1px solid #aab;text-align:center;padding-top:6px;color:#667;font-size:12px}
+#doc th,#doc td{white-space:normal}#doc .it{font-size:12.5px;table-layout:auto}
+@media(max-width:600px){#modal{padding:8px}#doc .it th,#doc .it td{padding:7px 3px;font-size:10.5px}#doc .ib{padding:14px}#doc .ib b{font-size:21px}#doc .ib small{letter-spacing:2px;font-size:9px}#doc .ib2{flex-direction:column;align-items:flex-start;gap:8px;padding:14px}#doc .ib2 div{text-align:left!important}#doc .bx{margin:10px 14px}#doc .sg{padding:36px 14px 8px;gap:20px}#doc h2{font-size:22px}}
+#doc .pr{display:grid;grid-template-columns:1.2fr 1fr;gap:14px;padding:16px 24px 8px}#doc .cd{border:1px solid #d5dff0;border-left:5px solid #2f8fe8;border-radius:14px;padding:14px 16px;background:linear-gradient(135deg,#fff,#f1f6fd)}
+#doc .cd h4{margin:0 0 8px;font-size:11px;letter-spacing:2.5px;color:#2f8fe8}#doc .nm{font-size:20px;font-weight:700;color:#0a1f44;line-height:1.2}#doc .sh{color:#13306b;font-weight:600;margin:2px 0 8px}
+#doc .kv{display:flex;justify-content:space-between;gap:12px;padding:6px 0;border-top:1px dashed #cfd9ec;font-size:13px}#doc .kv span{color:#778;flex:none}#doc .kv b{color:#13306b;text-align:right;font-weight:600}
+@media(max-width:600px){#doc .pr{grid-template-columns:1fr;padding:12px 14px 4px}}
+#gate{padding:60px;text-align:center}.note{color:var(--mut);font-size:12px;margin:6px 0}
+@media print{nav,main,#modal button,.noprint{display:none!important}#modal{position:static;display:block!important;background:none;padding:0}#doc{box-shadow:none;width:100%}}
+#mb{display:none;margin-left:auto;padding:6px 14px;font-size:20px}@media(max-width:800px){#app{flex-direction:column}nav{width:100%;height:auto;position:sticky;top:0;z-index:5;padding:8px 10px}.logo{margin:0;padding:2px 4px;border:0}#mb{display:block}#nv{display:none;max-height:70vh;overflow:auto}nav.open #nv{display:block}nav .note{display:none}main{padding:12px}h1{font-size:19px}.g{grid-template-columns:1fr 1fr;gap:10px}.st b{font-size:17px}.c{padding:12px}.f{grid-template-columns:1fr 1fr}input,select,textarea{font-size:16px}#doc{padding:14px}}
+#lock{position:fixed;inset:0;z-index:9999;background:linear-gradient(160deg,#0a1f44,#13306b 60%,#2a6bc4);display:flex;align-items:center;justify-content:center;padding:20px;overflow:auto}
+#lock .lb{background:var(--card);color:var(--tx);border-radius:20px;padding:26px 24px;width:380px;max-width:100%;box-shadow:0 10px 40px #0008}
+#lock h2{margin:8px 0 4px;color:var(--navy2);font-size:20px;text-align:center}@media(prefers-color-scheme:dark){#lock h2{color:var(--dia2)}}
+#lock .lbl{text-align:center}#lock .lbl b{display:block;letter-spacing:3px;font-size:18px}#lock .lbl small{font-size:10px;color:var(--mut);letter-spacing:1px}
+#lock .er{color:var(--bad);font-size:12.5px;min-height:18px;margin:6px 0;text-align:center;font-weight:600}
+#lock button{width:100%;margin-top:6px}#lock .lk{background:none;color:var(--dia);font-weight:600;font-size:12.5px;padding:6px}
+#lock .rc{font:700 20px/1.4 Consolas,monospace;letter-spacing:2px;text-align:center;background:var(--bg);border:2px dashed var(--dia);border-radius:12px;padding:14px;margin:10px 0;user-select:all}
+#lock input{font-size:16px;padding:12px 12px;margin-bottom:6px}#lock button{padding:13px 16px;font-size:16px;min-height:46px}
+@media(max-width:600px){#lock{align-items:flex-start;padding:max(16px,env(safe-area-inset-top)) 14px 24px}#lock .lb{padding:22px 18px;margin-top:6vh}#lock .rc{font-size:17px;letter-spacing:1px}}
+#lock{height:100vh;height:100dvh}
+@media print{#lock{display:none!important}}
+</style></head><body>
+<div id="lock"><div class="lb"><div class="lbl"><b>DIAMOND</b><small>HOME CARE PRODUCTS</small></div><p class="note" id="lstat" style="text-align:center;margin-top:14px">Loading… If this message stays on screen, this browser cannot run the app. Open the file in Chrome.</p><noscript><p class="er">JavaScript is turned off in this browser. Open the file in Chrome.</p></noscript></div></div>
+<script>window.onerror=function(m,u,l){var d=document.getElementById('lock'),e=document.getElementById('lstat');if(d&&d.style.display!=='none'&&e){e.style.color='#d64550';e.textContent='Error: '+m+' (line '+l+'). Please send this message to support.'}}</script>
+<div id="app"><nav><div class="logo"><svg width="40" height="40" viewBox="0 0 48 48"><defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d9f0ff"/><stop offset="1" stop-color="#2f8fe8"/></linearGradient></defs><path d="M12 5h24l9 12-21 27L3 17z" fill="url(#lg)" stroke="#e8eef8" stroke-width="1.5"/><path d="M3 17h42M17 5l-5 12 12 27 12-27-5-12M12 17l12 27M36 17L24 44" fill="none" stroke="#fff" stroke-opacity=".75" stroke-width="1"/></svg><div><b>DIAMOND</b><small>HOME CARE PRODUCTS</small></div><button id="mb" onclick="this.closest('nav').classList.toggle('open')">☰</button></div><div id="nv"></div><div class="note" style="color:#8fb2e6;padding:10px 8px">Clean Homes • Healthy Lives • Better Tomorrow</div></nav>
+<main id="m"><div id="gate">Loading Diamond Home Care…</div></main></div>
+<div id="modal"><div><div class="noprint" style="margin-bottom:8px"><button onclick="pdf()">⬇ Save PDF</button> <button class="s" onclick="prt()">🖨 Print</button> <button class="s" onclick="$('#modal').style.display='none'">Close</button></div><div id="doc"></div></div></div>
+<script>
+var __defProp = Object.defineProperty;
+var __defProps = Object.defineProperties;
+var __getOwnPropDescs = Object.getOwnPropertyDescriptors;
+var __getOwnPropSymbols = Object.getOwnPropertySymbols;
+var __hasOwnProp = Object.prototype.hasOwnProperty;
+var __propIsEnum = Object.prototype.propertyIsEnumerable;
+var __defNormalProp = (obj, key, value) => key in obj ? __defProp(obj, key, { enumerable: true, configurable: true, writable: true, value }) : obj[key] = value;
+var __spreadValues = (a, b) => {
+  for (var prop in b || (b = {}))
+    if (__hasOwnProp.call(b, prop))
+      __defNormalProp(a, prop, b[prop]);
+  if (__getOwnPropSymbols)
+    for (var prop of __getOwnPropSymbols(b)) {
+      if (__propIsEnum.call(b, prop))
+        __defNormalProp(a, prop, b[prop]);
+    }
+  return a;
+};
+var __spreadProps = (a, b) => __defProps(a, __getOwnPropDescs(b));
+var __objRest = (source, exclude) => {
+  var target = {};
+  for (var prop in source)
+    if (__hasOwnProp.call(source, prop) && exclude.indexOf(prop) < 0)
+      target[prop] = source[prop];
+  if (source != null && __getOwnPropSymbols)
+    for (var prop of __getOwnPropSymbols(source)) {
+      if (exclude.indexOf(prop) < 0 && __propIsEnum.call(source, prop))
+        target[prop] = source[prop];
+    }
+  return target;
+};
+var __async = (__this, __arguments, generator) => {
+  return new Promise((resolve, reject) => {
+    var fulfilled = (value) => {
+      try {
+        step(generator.next(value));
+      } catch (e) {
+        reject(e);
+      }
+    };
+    var rejected = (value) => {
+      try {
+        step(generator.throw(value));
+      } catch (e) {
+        reject(e);
+      }
+    };
+    var step = (x) => x.done ? resolve(x.value) : Promise.resolve(x.value).then(fulfilled, rejected);
+    step((generator = generator.apply(__this, __arguments)).next());
+  });
+};
+const $ = (s) => document.querySelector(s), E = (s) => String(s != null ? s : "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+const R = (n) => (n < 0 ? "-" : "") + "Rs " + Math.round(Math.abs(+n || 0)).toLocaleString("en-US"), T = () => (/* @__PURE__ */ new Date()).toISOString().slice(0, 10), N = (x) => +x || 0;
+const K = ["products", "customers", "sales", "payments", "purchases", "expenses", "returns", "suppliers", "audit"];
+let D = {}, db, user, ADMIN = false, ME = "user", pg = "dash", L = [], cur = "", curC = "";
+K.forEach((k) => D[k] = []);
+const NAV = [["dash", "\u25C6 Dashboard"], ["sale", "\u{1F9FE} New Sale"], ["hist", "\u{1F4DC} Sales History"], ["cust", "\u{1F465} Customers"], ["ledg", "\u{1F4D2} Customer Ledgers"], ["pay", "\u{1F4B0} Receive Payments"], ["prod", "\u{1F9F4} Products"], ["inv", "\u{1F4E6} Inventory"], ["purch", "\u{1F6D2} Purchases"], ["supp", "\u{1F69A} Suppliers"], ["exp", "\u{1F4B8} Expenses"], ["prof", "\u{1F4C8} Net Profit Reports"], ["stk", "\u{1F4CB} Stock Reports"], ["set", "\u2699 Settings"], ["bak", "\u2601 Backup and Export"], ["out", "\u{1F512} Lock / Logout"]];
+const pr = (id) => D.products.find((p) => p.id === id), cu = (id) => D.customers.find((c) => c.id === id), act = () => D.sales.filter((s) => s.st !== "cancelled");
+const PP = (p) => N(p == null ? void 0 : p.ppc) || 12, lp = (r) => r.c * PP(pr(r.pid)) + r.l;
+const stock = (p) => {
+  let n = N(p.opening);
+  D.purchases.filter((x) => x.pid === p.id).forEach((x) => n += x.c * PP(p));
+  act().forEach((s) => s.items.forEach((i) => {
+    if (i.pid === p.id) n -= i.pcs;
+  }));
+  D.returns.filter((x) => x.pid === p.id).forEach((x) => n += x.type === "return" ? x.pcs : -x.pcs);
+  return n;
+};
+const CT = (n, q = 12) => Math.floor(n / q) + " ctn " + n % q + " pcs";
+function evs(cid) {
+  const c = cu(cid), o = [];
+  D.sales.filter((s) => s.cid === cid && s.st !== "cancelled").forEach((s) => o.push({ d: s.date, r: s.no, t: "Invoice", dr: s.total, cr: s.recv }));
+  D.payments.filter((x) => x.cid === cid).forEach((x) => o.push({ d: x.date, r: x.no, t: "Payment (" + x.method + ")", dr: 0, cr: x.amt }));
+  D.returns.filter((x) => x.cid === cid && x.type === "return").forEach((x) => {
+    var _a;
+    return o.push({ d: x.date, r: "RET", t: "Return " + (((_a = pr(x.pid)) == null ? void 0 : _a.name) || ""), dr: 0, cr: x.value });
+  });
+  return o.sort((a, b) => a.d < b.d ? -1 : 1);
+}
+const bal = (cid) => {
+  var _a;
+  return evs(cid).reduce((b, e) => b + e.dr - e.cr, N((_a = cu(cid)) == null ? void 0 : _a.open));
+};
+const log = (a) => db.collection("audit").add({ t: (/* @__PURE__ */ new Date()).toISOString(), u: ME, a });
+const nextNo = (k, p) => __async(null, null, function* () {
+  const r = db.doc("meta/" + k), s = yield r.get(), n = (s.exists ? s.data().n : 0) + 1;
+  yield r.set({ n });
+  return p + String(n).padStart(4, "0");
+});
+const tb = (h, rows2) => `<table><tr>${h.map((x) => `<th class="${/^#/.test(x) ? "r" : ""}">${x.replace(/^#/, "")}</th>`).join("")}</tr>${rows2.join("") || `<tr><td colspan=${h.length} class="note">No records yet</td></tr>`}</table>`;
+const td = (v, r) => `<td${r ? ' class="r"' : ""}>${v}</td>`;
+const opt = (a, sel, ph) => `${ph ? `<option value="">${ph}</option>` : ""}` + a.map((x) => `<option value="${x[0]}" ${x[0] === sel ? "selected" : ""}>${E(x[1])}</option>`).join("");
+const V = (id) => {
+  var _a, _b;
+  return (_b = (_a = $("#" + id)) == null ? void 0 : _a.value) != null ? _b : "";
+};
+const fld = (id, l, t = "text", v = "") => `<div><label>${l}</label><input id="${id}" type="${t}" value="${E(v)}"></div>`;
+const hdr = () => `<div class="dh"><svg width="46" height="46" viewBox="0 0 48 48"><path d="M12 5h24l9 12-21 27L3 17z" fill="#2f8fe8" stroke="#0a1f44"/><path d="M3 17h42M17 5l-5 12 12 27 12-27-5-12" fill="none" stroke="#fff" stroke-width="1"/></svg><div><b>DIAMOND HOME CARE PRODUCTS</b><small>Clean Homes \u2022 Healthy Lives \u2022 Better Tomorrow<br>Buner Commercial Complex, Sowari, Buner, KPK \xB7 WhatsApp 03420899897</small></div></div>`;
+let CD = "report";
+const show = (h, raw) => {
+  if (!raw) CD = "report-" + T();
+  $("#doc").innerHTML = raw ? h : '<div style="padding:24px">' + hdr() + h + "</div>";
+  $("#modal").style.display = "flex";
+};
+const bn = () => `<div class="ib"><svg width="52" height="52" viewBox="0 0 48 48"><path d="M12 5h24l9 12-21 27L3 17z" fill="#8fd0ff" stroke="#fff"/><path d="M3 17h42M17 5l-5 12 12 27 12-27-5-12" fill="none" stroke="#fff" stroke-width="1"/></svg><div><b>DIAMOND</b><small>HOME CARE PRODUCTS</small><i>Clean Homes \u2022 Healthy Lives \u2022 Better Tomorrow</i></div></div>`;
+const tr = (a, b, h) => `<div class="tr${h ? " h" : ""}"><span>${a}</span><span>${b}</span></div>`, ft = () => `<div class="sg"><div>Customer Signature</div><div>Authorized Signature</div></div><p style="text-align:center;color:#778;font-size:11px;padding:0 24px 18px">Buner Commercial Complex, Sowari, Buner, KPK \xB7 WhatsApp 03420899897 \xB7 Thank you for your business</p>`;
+const lib = (u) => new Promise((a, j) => {
+  const e = document.createElement("script");
+  e.src = u;
+  e.onload = a;
+  e.onerror = () => j(new Error("Could not load PDF tools"));
+  document.head.appendChild(e);
+});
+let _l;
+const ld = () => _l || (_l = lib("https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js").then(() => lib("https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js")));
+function pdf() {
+  return __async(this, null, function* () {
+    try {
+      const dl = yield getDL();
+      if (!dl) return alert("Saving files is not available in this view.");
+      yield ld();
+      const cv = yield html2canvas($("#doc"), { scale: 2, backgroundColor: "#ffffff" }), w = 210, h = cv.height * w / cv.width, d = new window.jspdf.jsPDF("p", "mm", h > 297 ? [w, h] : "a4");
+      d.addImage(cv.toDataURL("image/jpeg", 0.92), "JPEG", 0, 0, w, h);
+      yield dl.save({ filename: CD + ".pdf", data: d.output("blob") });
+    } catch (e) {
+      if (e && e.code === "declined") return;
+      alert("PDF failed: " + (e.message || e));
+    }
+  });
+}
+function prt() {
+  try {
+    window.print();
+  } catch (e) {
+    alert("Printing is blocked here. Use Save PDF, then print the PDF.");
+  }
+}
+const month = (d) => d.slice(0, 7);
+function lineEff(s) {
+  const sub2 = s.items.reduce((a, i) => a + i.tot, 0) || 1, k = s.total / sub2;
+  return s.items.map((i) => __spreadProps(__spreadValues({}, i), { rev: i.tot * k, cost: i.pcs * i.cpp }));
+}
+function profit(f) {
+  const m = {};
+  D.products.forEach((p) => m[p.id] = { n: p.name, q: PP(p), pcs: 0, rev: 0, cost: 0 });
+  act().filter((s) => f(s.date)).forEach((s) => lineEff(s).forEach((i) => {
+    const r = m[i.pid] || (m[i.pid] = { n: i.name, q: 12, pcs: 0, rev: 0, cost: 0 });
+    r.pcs += i.pcs;
+    r.rev += i.rev;
+    r.cost += i.cost;
+  }));
+  D.returns.filter((x) => f(x.date)).forEach((x) => {
+    const r = m[x.pid];
+    if (!r) return;
+    if (x.type === "return") {
+      r.pcs -= x.pcs;
+      r.rev -= x.value;
+      r.cost -= x.pcs * x.cpp;
+    } else r.cost += x.pcs * x.cpp;
+  });
+  return Object.values(m);
+}
+const sum = (a, k) => a.reduce((s, x) => s + x[k], 0);
+const bars = (a) => {
+  const mx = Math.max(1, ...a.map((x) => Math.abs(x.v)));
+  return `<div class="bar">${a.map((x) => `<div title="${R(x.v)}"><i style="height:${Math.round(Math.abs(x.v) / mx * 100)}px"></i>${E(x.l)}</div>`).join("")}</div>`;
+};
+const guard = () => ADMIN || (alert("Admin access required."), false);
+window.alert = (m) => {
+  const t = document.createElement("div");
+  t.textContent = m;
+  t.style.cssText = "position:fixed;left:12px;right:12px;bottom:24px;background:#d64550;color:#fff;padding:14px;border-radius:12px;z-index:99;font-weight:600;box-shadow:0 4px 20px #0006";
+  document.body.appendChild(t);
+  setTimeout(() => t.remove(), 6e3);
+};
+const ask = (m) => new Promise((r) => {
+  const d = document.createElement("div");
+  d.style.cssText = "position:fixed;inset:0;background:#000a;z-index:99;display:flex;align-items:center;justify-content:center;padding:20px";
+  d.innerHTML = '<div class=c style="max-width:340px"><p>' + E(m) + "</p><button id=y>Yes</button> <button class=s id=n>No</button></div>";
+  document.body.appendChild(d);
+  d.querySelector("#y").onclick = () => {
+    d.remove();
+    r(true);
+  };
+  d.querySelector("#n").onclick = () => {
+    d.remove();
+    r(false);
+  };
+});
+const P = {
+  dash() {
+    const t = T(), ss = act(), mo = month(t), pf = profit(() => true), ts = ss.filter((s) => s.date === t), ms = ss.filter((s) => month(s.date) === mo);
+    const rec = sum(ss, "recv") + sum(D.payments, "amt"), ctn = pf.reduce((a, x) => a + x.pcs / x.q, 0), stv = D.products.reduce((a, p) => a + stock(p) / PP(p), 0), low = D.products.filter((p) => stock(p) < PP(p) * N(p.low));
+    const owe = D.customers.map((c) => ({ c, b: bal(c.id) })).filter((x) => x.b > 0).sort((a, b) => b.b - a.b);
+    const months = [...Array(6)].map((_, i) => {
+      const d = /* @__PURE__ */ new Date();
+      d.setMonth(d.getMonth() - 5 + i);
+      return d.toISOString().slice(0, 7);
+    });
+    const card = (l, v) => `<div class="c st"><small>${l}</small><b>${v}</b></div>`;
+    return `<h1>Dashboard</h1><div class="g">${card("Today's Sales", R(sum(ts, "total")))}${card("Monthly Sales", R(sum(ms, "total")))}${card("Total Net Profit", R(sum(pf, "rev") - sum(pf, "cost")))}${card("Customer Receivables", R(owe.reduce((a, x) => a + x.b, 0)))}${card("Total Cash Received", R(rec))}${card("Cartons Sold", ctn.toFixed(1))}${card("Stock Available", stv.toFixed(1) + " cartons")}${card("Low Stock Alerts", low.length + (low.length ? " \u26A0" : ""))}</div>
+ <div class="g2"><div class="c"><b>Product-wise sales</b>${bars(pf.map((x) => ({ l: x.n.split(" ")[0] + (x.n.match(/\d+/) || [""])[0], v: x.rev })))}</div><div class="c"><b>Monthly net profit</b>${bars(months.map((m) => {
+      const q = profit((d) => month(d) === m);
+      return { l: m.slice(5), v: sum(q, "rev") - sum(q, "cost") };
+    }))}</div></div>
+ <div class="g2"><div class="c"><b>Recent invoices</b>${tb(["Invoice", "Customer", "#Total"], [...D.sales].sort((a, b) => b.no < a.no ? -1 : 1).slice(0, 6).map((s) => `<tr>${td(s.no)}${td(E(s.cname))}${td(R(s.total), 1)}</tr>`))}</div>
+ <div class="c"><b>Recent payments</b>${tb(["Receipt", "Customer", "#Amount"], [...D.payments].sort((a, b) => b.no < a.no ? -1 : 1).slice(0, 6).map((x) => {
+      var _a;
+      return `<tr>${td(x.no)}${td(E((_a = cu(x.cid)) == null ? void 0 : _a.name))}${td(R(x.amt), 1)}</tr>`;
+    }))}</div>
+ <div class="c"><b>Outstanding balances</b>${tb(["Customer", "#Balance"], owe.slice(0, 6).map((x) => `<tr>${td(E(x.c.name))}${td(R(x.b), 1)}</tr>`))}</div></div>`;
+  },
+  sale() {
+    if (!L.length) L = [{ pid: "", c: 0, l: 0, pc: 0 }];
+    return `<h1>New Sale / Invoice</h1><div class="c">${hdr()}<div class="f"><div><label>Invoice No</label><input id="ino" disabled value="Automatic on save"></div>${fld("idate", "Invoice date", "date", T())}<div><label>Existing customer</label><select id="icu" onchange="pickC(this.value)">${opt(D.customers.map((c) => [c.id, c.name + (c.shop ? " \u2013 " + c.shop : "")]), "", "\u2014 New customer \u2014")}</select></div>${fld("cn", "Customer name")}${fld("cs", "Shop name")}${fld("cm", "Mobile number")}${fld("ca", "Address")}<div><label>Previous balance</label><input id="cprev" disabled value="Rs 0"></div></div>
+ <table><thead><tr><th>Product</th><th>Size</th><th>Cartons</th><th>Loose pcs</th><th class="r">Total pcs</th><th>Price/carton</th><th class="r">Price/pc</th><th class="r">Line total</th><th></th></tr></thead><tbody id="lines"></tbody></table><p><button class="s" onclick="L.push({pid:'',c:0,l:0,pc:0});rows()">+ Add product</button></p>
+ <div class="f"><div><label>Discount (Rs)</label><input id="disc" type="number" min="0" value="0" oninput="upd()"></div><div><label>Amount received</label><input id="recv" type="number" min="0" value="0" oninput="upd()"></div><div><label>Payment method</label><select id="meth"><option>Cash</option><option>Bank Transfer</option><option>JazzCash</option><option>EasyPaisa</option><option>Credit</option></select></div><div><label>Payment status</label><input id="pst" disabled></div></div>
+ <div class="f"><div class="c st"><small>Subtotal</small><b id="tsub">Rs 0</b></div><div class="c st"><small>Invoice total</small><b id="ttot">Rs 0</b></div><div class="c st"><small>Remaining on this invoice</small><b id="trem">Rs 0</b></div><div class="c st"><small>New customer balance</small><b id="tnb">Rs 0</b></div></div>
+ <label>Notes</label><textarea id="note" rows=2></textarea><p><button onclick="finalize()">\u2714 Finalize sale</button></p></div>`;
+  },
+  hist() {
+    return `<h1>Sales History</h1><div class="c">${tb(["Invoice", "Date", "Customer", "#Total", "#Received", "Status", ""], [...D.sales].sort((a, b) => b.no < a.no ? -1 : 1).map((s) => {
+      const st = s.st === "cancelled" ? "cancelled" : s.recv >= s.total ? "Paid" : s.recv > 0 ? "Partial" : "Unpaid";
+      return `<tr>${td(s.no)}${td(s.date)}${td(E(s.cname))}${td(R(s.total), 1)}${td(R(s.recv), 1)}${td(`<span class="pill ${st}">${st}</span>`)}${td(`<button class="x s" onclick="inv('${s.id}')">View/Print</button> ${s.st !== "cancelled" ? `<button class="x d" onclick="cancel('${s.id}')">Cancel</button>` : ""}`)}</tr>`;
+    }))}</div>`;
+  },
+  cust() {
+    return `<h1>Customers</h1><div class="c"><div class="f">${fld("n", "Name")}${fld("s", "Shop")}${fld("m", "Mobile")}${fld("a", "Address")}${fld("o", "Opening balance", "number", "0")}</div><button onclick="addC()">Add customer</button></div><br><div class="c">${tb(["Customer", "Shop", "Mobile", "#Balance", ""], D.customers.map((c) => `<tr>${td(E(c.name) + (c.code ? " <small>(" + c.code + ")</small>" : ""))}${td(E(c.shop))}${td(E(c.mobile))}${td(R(bal(c.id)), 1)}${td(`<button class="x s" onclick="curC='${c.id}';go('ledg')">Ledger</button>`)}</tr>`))}</div>`;
+  },
+  ledg() {
+    const c = cu(curC);
+    let b = N(c == null ? void 0 : c.open), rows2 = c ? evs(c.id).map((e) => {
+      b += e.dr - e.cr;
+      return `<tr>${td(e.d)}${td(e.r)}${td(e.t)}${td(R(e.dr), 1)}${td(R(e.cr), 1)}${td(R(b), 1)}</tr>`;
+    }) : [];
+    return `<h1>Customer Ledgers</h1><div class="c"><div class="f"><div><label>Customer</label><select onchange="curC=this.value;render()">${opt(D.customers.map((c2) => [c2.id, c2.name]), curC, "Select customer")}</select></div></div>${c ? `<p>Opening balance: <b>${R(c.open)}</b> \xB7 Closing balance: <b>${R(bal(c.id))}</b> <button class="x" onclick="printLedg()">Print ledger</button></p><div id="lg">${tb(["Date", "Ref", "Type", "#Debit", "#Credit", "#Balance"], rows2)}</div>` : ""}</div>`;
+  },
+  pay() {
+    return `<h1>Receive Payments</h1><div class="c"><div class="f"><div><label>Customer</label><select id="pc">${opt(D.customers.map((c) => [c.id, c.name + " (owes " + R(bal(c.id)) + ")"]), "", "Select")}</select></div>${fld("pa", "Amount", "number")}${fld("pd", "Date", "date", T())}<div><label>Method</label><select id="pm"><option>Cash</option><option>Bank Transfer</option><option>JazzCash</option><option>EasyPaisa</option></select></div></div><button onclick="addPay()">Save & print receipt</button></div><br><div class="c">${tb(["Receipt", "Date", "Customer", "Method", "#Amount", ""], [...D.payments].sort((a, b) => b.no < a.no ? -1 : 1).map((x) => {
+      var _a;
+      return `<tr>${td(x.no)}${td(x.date)}${td(E((_a = cu(x.cid)) == null ? void 0 : _a.name))}${td(x.method)}${td(R(x.amt), 1)}${td(`<button class="x s" onclick="rct('${x.id}')">Print</button>`)}</tr>`;
+    }))}</div>`;
+  },
+  prod() {
+    return `<h1>Products</h1><p class="note">${ADMIN ? "Change the numbers inside a product, then press Save. Old invoices keep the prices they were sold at." : "Only an admin can edit products."}</p><div class="g2">${D.products.map((p) => {
+      const q = PP(p), pf = p.price - p.cost, d = ADMIN ? "" : "disabled", i = (k, l, v) => `<div><label>${l}</label><input id="${k}${p.id}" type="number" step="any" value="${v}" ${d}></div>`;
+      return `<div class="c"><b style="font-size:16px">${E(p.name)}</b> <span class="note">${E(p.size)}</span><div class="f">${i("q", "Pieces in 1 carton", q)}${i("c", "Cost of 1 carton (Rs)", p.cost)}${i("s", "Selling price of 1 carton (Rs)", p.price)}${i("o", "Cartons in stock at start", N(p.opening) / q || 0)}${i("l", "Low stock alert (cartons)", p.low || 0)}</div><p class="note">Per piece: cost ${R(p.cost / q)} \xB7 sell ${R(p.price / q)}<br><b style="color:${pf < 0 ? "var(--bad)" : "var(--ok)"}">Profit: ${R(pf)} per carton \xB7 ${R(pf / q)} per piece</b></p>${ADMIN ? `<button class="x" onclick="saveP('${p.id}')">Save</button>` : ""}</div>`;
+    }).join("")}</div>${ADMIN ? `<br><div class="c"><b>Add product</b><div class="f">${fld("np", "Name")}${fld("nz", "Size")}${fld("npc", "Pieces per carton", "number", "12")}${fld("nc", "Carton cost", "number")}${fld("ns", "Carton price", "number")}</div><button onclick="addP()">Add product</button></div>` : ""}`;
+  },
+  inv() {
+    return `<h1>Inventory</h1><div class="c">${stkT()}</div><br><div class="c"><b>Record return or damaged stock</b><div class="f"><div><label>Product</label><select id="rp">${opt(D.products.map((p) => [p.id, p.name]))}</select></div><div><label>Type</label><select id="rt"><option value="return">Customer return (restock)</option><option value="damage">Damaged stock</option></select></div>${fld("rq", "Pieces", "number")}<div><label>Customer (returns)</label><select id="rc">${opt(D.customers.map((c) => [c.id, c.name]), "", "\u2014")}</select></div>${fld("rv", "Credit value (blank = price/pc \xD7 pcs)", "number")}${fld("rd", "Date", "date", T())}</div><button onclick="addR()">Save</button></div>`;
+  },
+  purch() {
+    return `<h1>Purchases</h1><div class="c"><div class="f">${fld("bd", "Date", "date", T())}<div><label>Supplier</label><select id="bs">${opt(D.suppliers.map((s) => [s.id, s.name]), "", "\u2014")}</select></div><div><label>Product</label><select id="bp" onchange="$('#bk').value=(pr(this.value)||{}).cost">${opt(D.products.map((p) => [p.id, p.name]), "", "Select")}</select></div>${fld("bc", "Cartons", "number")}${fld("bk", "Cost per carton", "number")}${fld("bpd", "Amount paid", "number")}</div><button onclick="addB()">Add purchase</button></div><br><div class="c">${tb(["Date", "Supplier", "Product", "#Cartons", "#Cost/ctn", "#Total", "#Paid"], [...D.purchases].sort((a, b) => b.date < a.date ? -1 : 1).map((x) => {
+      var _a, _b;
+      return `<tr>${td(x.date)}${td(E(((_a = D.suppliers.find((s) => s.id === x.sid)) == null ? void 0 : _a.name) || "-"))}${td(E((_b = pr(x.pid)) == null ? void 0 : _b.name))}${td(x.c, 1)}${td(R(x.k), 1)}${td(R(x.c * x.k), 1)}${td(R(x.paid), 1)}</tr>`;
+    }))}</div>`;
+  },
+  supp() {
+    return `<h1>Suppliers</h1><div class="c"><div class="f">${fld("sn", "Name")}${fld("sp", "Phone")}</div><button onclick="addS()">Add supplier</button></div><br><div class="c">${tb(["Supplier", "Phone", "#Purchased", "#Paid", "#Payable"], D.suppliers.map((s) => {
+      const p = D.purchases.filter((x) => x.sid === s.id), t = p.reduce((a, x) => a + x.c * x.k, 0), pd = sum(p, "paid");
+      return `<tr>${td(E(s.name))}${td(E(s.phone))}${td(R(t), 1)}${td(R(pd), 1)}${td(R(t - pd), 1)}</tr>`;
+    }))}</div>`;
+  },
+  exp() {
+    return `<h1>Expenses</h1><div class="c"><p class="note">Expenses are recorded for tracking only. Product costs already include your business expenses, so they are NOT deducted again from net profit.</p><div class="f">${fld("ed", "Date", "date", T())}${fld("ec", "Category")}${fld("ea", "Amount", "number")}${fld("en", "Note")}</div><button onclick="addE()">Add expense</button></div><br><div class="c">${tb(["Date", "Category", "Note", "#Amount"], [...D.expenses].sort((a, b) => b.date < a.date ? -1 : 1).map((x) => `<tr>${td(x.date)}${td(E(x.cat))}${td(E(x.note))}${td(R(x.amt), 1)}</tr>`))}<p><b>Total tracked: ${R(sum(D.expenses, "amt"))}</b></p></div>`;
+  },
+  prof() {
+    const f = cur ? (d) => month(d) === cur : () => true, q = profit(f), ms = [...new Set(act().map((s) => month(s.date)))].sort().reverse(), dmg = D.returns.filter((x) => x.type === "damage" && f(x.date)).reduce((a, x) => a + x.pcs * x.cpp, 0);
+    return `<div id="pf"><h1>Net Profit Reports</h1><div class="c"><div class="f"><div><label>Month</label><select onchange="cur=this.value;render()">${opt(ms.map((m) => [m, m]), cur, "All time")}</select></div></div><p class="note">Net profit = selling price \u2212 supplied carton cost (already includes expenses). Uses prices at time of sale; discounts spread across invoice lines; returns and cancellations excluded. Damaged stock cost is shown as a loss.</p><button class="x" onclick="show($('#pf .c').innerHTML)">Print</button>${tb(["Product", "#Cartons sold", "#Revenue", "#Recorded cost", "#Net profit", "#Per carton", "#Per piece"], [...q.map((x) => `<tr>${td(E(x.n))}${td((x.pcs / x.q).toFixed(1), 1)}${td(R(x.rev), 1)}${td(R(x.cost), 1)}${td(R(x.rev - x.cost), 1)}${td(R(x.pcs ? (x.rev - x.cost) / (x.pcs / x.q) : 0), 1)}${td(R(x.pcs ? (x.rev - x.cost) / x.pcs : 0), 1)}</tr>`), `<tr><th>TOTAL</th>${td(q.reduce((a, x) => a + x.pcs / x.q, 0).toFixed(1), 1)}${td(R(sum(q, "rev")), 1)}${td(R(sum(q, "cost")), 1)}${td("<b>" + R(sum(q, "rev") - sum(q, "cost")) + "</b>", 1)}<td></td><td></td></tr>`])}<p>Damaged stock loss (already inside costs above): ${R(dmg)}</p></div><br><div class="c"><b>Monthly summary</b>${tb(["Month", "#Sales", "#Cash in", "#Cost", "#Net profit"], ms.map((m) => {
+      const g = profit((d) => month(d) === m), ss = act().filter((s) => month(s.date) === m);
+      return `<tr>${td(m)}${td(R(sum(ss, "total")), 1)}${td(R(sum(ss, "recv") + sum(D.payments.filter((x) => month(x.date) === m), "amt")), 1)}${td(R(sum(g, "cost")), 1)}${td(R(sum(g, "rev") - sum(g, "cost")), 1)}</tr>`;
+    }))}</div></div>`;
+  },
+  stk() {
+    return `<h1>Stock Reports</h1><div class="c"><button class="x" onclick="show('<h3>Stock Report \u2013 '+T()+'</h3>'+stkT())">Print</button>${stkT()}</div>`;
+  },
+  set() {
+    return `<h1>Settings</h1><div class="c"><p>Signed-in role: <b>${ADMIN ? "Admin" : "Staff"}</b></p><p class="note">Admin = owner/Editor of this artifact. Staff (Contributors) can create sales, payments and purchases but cannot change products, cancel invoices or restore backups. Share the page from claude.ai to add users and set each person's level. Authentication is handled by your claude.ai sign-in.</p></div>${LOCAL ? secCard() : ""}<br><div class="c"><b>Audit log (latest 60)</b>${tb(["Time", "User", "Action"], [...D.audit].sort((a, b) => b.t < a.t ? -1 : 1).slice(0, 60).map((x) => `<tr>${td(x.t.replace("T", " ").slice(0, 19))}${td(E(x.u))}${td(E(x.a))}</tr>`))}</div>`;
+  },
+  bak() {
+    return `<h1>Backup and Export</h1><div class="c"><p>${LOCAL ? "<b>Offline version:</b> data is stored only in this browser on this device, so download a backup often. " : ""}Download a full backup (all records) or CSV exports. Restore reloads a backup file into the database (admin only).</p><button onclick="backup()">\u2B07 Full backup (JSON)</button> <button class="s" onclick="csv('sales')">Sales CSV</button> <button class="s" onclick="csv('payments')">Payments CSV</button> <button class="s" onclick="csv('customers')">Customers CSV</button> <button class="s" onclick="csv('purchases')">Purchases CSV</button><p><label>Restore from backup file</label><input type="file" accept=".json" onchange="restore(this.files[0])"></p><p class="note">Take a backup regularly, and test a restore on a copy before relying on it.</p></div>`;
+  }
+};
+function stkT() {
+  return tb(["Product", "#Opening", "#Purchased", "#Sold", "#Returns", "#Damaged", "#Available", "#Value @cost", "Status"], D.products.map((p) => {
+    const q = PP(p), pu = D.purchases.filter((x) => x.pid === p.id).reduce((a, x) => a + x.c * q, 0), so = act().reduce((a, s) => a + s.items.filter((i) => i.pid === p.id).reduce((b, i) => b + i.pcs, 0), 0), re = D.returns.filter((x) => x.pid === p.id && x.type === "return").reduce((a, x) => a + x.pcs, 0), da = D.returns.filter((x) => x.pid === p.id && x.type === "damage").reduce((a, x) => a + x.pcs, 0), st = stock(p), lo = st < q * N(p.low);
+    return `<tr>${td(E(p.name))}${td(CT(N(p.opening), q), 1)}${td(CT(pu, q), 1)}${td(CT(so, q), 1)}${td(CT(re, q), 1)}${td(CT(da, q), 1)}${td("<b>" + CT(st, q) + "</b>", 1)}${td(R(st * p.cost / q), 1)}${td(`<span class="pill ${lo ? "low" : "ok"}">${lo ? "LOW" : "OK"}</span>`)}</tr>`;
+  }));
+}
+function render() {
+  $("#nv").innerHTML = NAV.map((n) => `<a class="${n[0] === pg ? "on" : ""}" onclick="go('${n[0]}')">${n[1]}</a>`).join("");
+  $("#m").innerHTML = P[pg]();
+  if (pg === "sale") rows();
+}
+function go(p) {
+  if (p === "out") return logout();
+  pg = p;
+  document.querySelector("nav").classList.remove("open");
+  if (p === "sale") L = [];
+  render();
+  scrollTo(0, 0);
+}
+function rows() {
+  $("#lines").innerHTML = L.map((r, i) => {
+    var _a;
+    return `<tr><td><select onchange="pick(${i},this.value)">${opt(D.products.map((p) => [p.id, p.name]), r.pid, "Select\u2026")}</select></td><td>${E(((_a = pr(r.pid)) == null ? void 0 : _a.size) || "")}</td><td><input type="number" min="0" value="${r.c}" oninput="up(${i},'c',this.value)"></td><td><input type="number" min="0" value="${r.l}" oninput="up(${i},'l',this.value)"></td><td class="r" id="lp${i}"></td><td><input type="number" min="0" value="${r.pc}" oninput="up(${i},'pc',this.value)"></td><td class="r" id="lq${i}"></td><td class="r" id="lt${i}"></td><td><button class="x d" onclick="L.splice(${i},1);rows()">\u2715</button></td></tr>`;
+  }).join("");
+  upd();
+}
+function pick(i, id) {
+  var _a;
+  L[i].pid = id;
+  L[i].pc = ((_a = pr(id)) == null ? void 0 : _a.price) || 0;
+  rows();
+}
+function up(i, k, v) {
+  L[i][k] = N(v);
+  upd();
+}
+function sub() {
+  return L.reduce((a, r) => a + lp(r) * r.pc / PP(pr(r.pid)), 0);
+}
+function upd() {
+  L.forEach((r, i) => {
+    const q = PP(pr(r.pid)), p = r.c * q + r.l;
+    $("#lp" + i).textContent = p;
+    $("#lq" + i).textContent = R(r.pc / q);
+    $("#lt" + i).textContent = R(p * r.pc / q);
+  });
+  const s = sub(), d = N(V("disc")), t = Math.max(0, s - d), rc = N(V("recv")), rem = t - rc, pv = N($("#cprev").dataset.v);
+  $("#tsub").textContent = R(s);
+  $("#ttot").textContent = R(t);
+  $("#trem").textContent = R(rem);
+  $("#tnb").textContent = R(pv + rem);
+  $("#pst").value = rem <= 0 ? "Paid" : rc > 0 ? "Partial" : "Unpaid";
+}
+function pickC(id) {
+  const c = cu(id) || {};
+  $("#cn").value = c.name || "";
+  $("#cs").value = c.shop || "";
+  $("#cm").value = c.mobile || "";
+  $("#ca").value = c.address || "";
+  const b = c.id ? bal(c.id) : 0;
+  $("#cprev").dataset.v = b;
+  $("#cprev").value = R(b);
+  upd();
+}
+function finalize() {
+  return __async(this, null, function* () {
+    const items = L.filter((r) => r.pid && lp(r) > 0);
+    if (!items.length) return alert("Add at least one product with quantity.");
+    const need = {};
+    items.forEach((r) => need[r.pid] = (need[r.pid] || 0) + lp(r));
+    for (const id in need) if (need[id] > stock(pr(id))) return alert("Not enough stock for " + pr(id).name + ". Available: " + CT(stock(pr(id)), PP(pr(id))));
+    if (!V("cn").trim()) return alert("Enter customer name.");
+    const s0 = sub(), disc = N(V("disc")), total = Math.max(0, s0 - disc), recv = N(V("recv"));
+    if (disc > s0) return alert("Discount exceeds subtotal.");
+    let cid = V("icu");
+    if (!cid) {
+      const r = yield db.collection("customers").add({ code: yield nextNo("cust", "C-"), name: V("cn").trim(), shop: V("cs"), mobile: V("cm"), address: V("ca"), open: 0 });
+      cid = r.id;
+      log("New customer " + V("cn"));
+    }
+    const prev = bal(cid) || 0, no = yield nextNo("inv", "DHC-");
+    const doc = { no, date: V("idate") || T(), cid, cname: V("cn").trim(), shop: V("cs"), mobile: V("cm"), addr: V("ca"), prev: cu(cid) ? prev : 0, items: items.map((r) => {
+      const p = pr(r.pid), q = PP(p), pcs = r.c * q + r.l;
+      return { pid: r.pid, name: p.name, size: p.size, c: r.c, l: r.l, pcs, ppp: r.pc / q, pc: r.pc, cpp: p.cost / q, tot: pcs * r.pc / q };
+    }), disc, total, recv, method: V("meth"), note: V("note"), st: "active", by: ME };
+    const ref = yield db.collection("sales").add(doc);
+    log(`Sale ${no} ${R(total)} to ${doc.cname}`);
+    L = [];
+    pg = "hist";
+    render();
+    inv(ref.id, doc);
+  });
+}
+function inv(id, d) {
+  var _a;
+  const s = d || D.sales.find((x) => x.id === id);
+  if (!s) return;
+  const rem = s.total - s.recv, st = s.st === "cancelled" ? "Cancelled" : rem <= 0 ? "Paid" : s.recv > 0 ? "Partial" : "Unpaid", f = (n) => Number.isInteger(n) ? n.toLocaleString("en-US") : n.toFixed(2), sb = s.items.reduce((a, i) => a + i.tot, 0);
+  CD = s.no;
+  show(`${bn()}<div class="ib2"><h2>SALES INVOICE</h2><div style="text-align:right;line-height:1.7">Invoice No: <b>${s.no}</b><br>Date: ${s.date}<br>Due: ${s.date}<br><span class="pill ${st === "Cancelled" ? "cancelled" : st}">${st}</span></div></div><div class="pr"><div class="cd"><h4>BILLED TO</h4><div class="nm">${E(s.cname)}</div>${s.shop ? `<div class="sh">${E(s.shop)}</div>` : ""}${((_a = cu(s.cid)) == null ? void 0 : _a.code) ? `<div class="kv"><span>Customer ID</span><b>${E(cu(s.cid).code)}</b></div>` : ""}${s.mobile ? `<div class="kv"><span>Mobile</span><b>${E(s.mobile)}</b></div>` : ""}${s.addr ? `<div class="kv"><span>Address</span><b>${E(s.addr)}</b></div>` : ""}</div><div class="cd"><h4>PAYMENT DETAILS</h4><div class="kv" style="border:0"><span>Method</span><b>${E(s.method)}</b></div><div class="kv"><span>Status</span><b><span class="pill ${st === "Cancelled" ? "cancelled" : st}">${st}</span></b></div><div class="kv"><span>Due date</span><b>${s.date}</b></div>${s.note ? `<div class="kv"><span>Notes</span><b>${E(s.note)}</b></div>` : ""}</div></div><div style="padding:0 24px"><table class="it"><tr><th>#</th><th>PRODUCT</th><th>CARTONS</th><th>LOOSE</th><th>TOTAL PCS</th><th>PRICE/PC</th><th>PRICE/CTN</th><th>LINE TOTAL</th></tr>${s.items.map((i, k) => `<tr><td>${k + 1}</td><td>${E(i.name)}</td><td>${i.c}</td><td>${i.l}</td><td>${i.pcs}</td><td>${f(i.ppp)}</td><td>${f(i.pc)}</td><td><b>${f(i.tot)}</b></td></tr>`).join("")}</table><div style="height:10px"></div>${tr("Total cartons", s.items.reduce((a, i) => a + i.c, 0))}${tr("Total pieces", s.items.reduce((a, i) => a + i.pcs, 0))}${tr("Previous balance", R(s.prev))}${tr("Subtotal", R(sb))}${tr("Discount", R(s.disc))}${tr("Grand total", R(s.total), 1)}${tr("Amount received", R(s.recv))}${tr("Remaining balance", R(rem), 1)}${s.prev ? tr("Total due (with previous balance)", R(s.prev + rem)) : ""}</div>${ft()}`, 1);
+}
+function cancel(id) {
+  return __async(this, null, function* () {
+    if (!guard() || !(yield ask("Cancel this invoice? Stock and ledger will be restored."))) return;
+    const s = D.sales.find((x) => x.id === id);
+    yield db.doc("sales/" + id).update({ st: "cancelled" });
+    log("Cancelled " + s.no);
+  });
+}
+function addC() {
+  return __async(this, null, function* () {
+    if (!V("n").trim()) return alert("Name required");
+    yield db.collection("customers").add({ code: yield nextNo("cust", "C-"), name: V("n").trim(), shop: V("s"), mobile: V("m"), address: V("a"), open: N(V("o")) });
+    log("Customer " + V("n"));
+  });
+}
+function addPay() {
+  return __async(this, null, function* () {
+    const a = N(V("pa"));
+    if (!V("pc") || a <= 0) return alert("Choose customer and amount.");
+    const no = yield nextNo("rct", "RCT-"), d = { no, date: V("pd") || T(), cid: V("pc"), amt: a, method: V("pm"), by: ME }, r = yield db.collection("payments").add(d);
+    log(`Payment ${no} ${R(a)}`);
+    rct(r.id, d);
+  });
+}
+function rct(id, d) {
+  const x = d || D.payments.find((p) => p.id === id), c = cu(x.cid);
+  CD = x.no;
+  show(`${bn()}<div class="ib2"><h2>PAYMENT RECEIPT</h2><div style="text-align:right;line-height:1.7">Receipt No: <b>${x.no}</b><br>Date: ${x.date}</div></div><div class="pr"><div class="cd"><h4>RECEIVED FROM</h4><div class="nm">${E(c == null ? void 0 : c.name)}</div>${(c == null ? void 0 : c.shop) ? `<div class="sh">${E(c.shop)}</div>` : ""}${(c == null ? void 0 : c.code) ? `<div class="kv"><span>Customer ID</span><b>${E(c.code)}</b></div>` : ""}${(c == null ? void 0 : c.mobile) ? `<div class="kv"><span>Mobile</span><b>${E(c.mobile)}</b></div>` : ""}</div></div><div style="padding:0 24px">${tr("Payment method", E(x.method))}${tr("Amount received", R(x.amt), 1)}${tr("Balance after payment", R(bal(x.cid)), 1)}</div>${ft()}`, 1);
+}
+function printLedg() {
+  const c = cu(curC);
+  show(`<h3>Customer Ledger \u2013 ${E(c.name)} ${E(c.shop)}</h3><p>Mobile: ${E(c.mobile)} \xB7 Opening: ${R(c.open)}</p>` + $("#lg").innerHTML + `<p><b>Closing balance: ${R(bal(c.id))}</b></p>`);
+}
+function saveP(id) {
+  return __async(this, null, function* () {
+    if (!guard()) return;
+    yield db.doc("products/" + id).update({ cost: N(V("c" + id)), price: N(V("s" + id)), ppc: N(V("q" + id)) || 12, opening: Math.round(N(V("o" + id)) * (N(V("q" + id)) || 12)), low: N(V("l" + id)) });
+    log("Edited product " + pr(id).name);
+  });
+}
+function addP() {
+  return __async(this, null, function* () {
+    if (!guard() || !V("np")) return;
+    yield db.collection("products").add({ name: V("np"), size: V("nz"), cost: N(V("nc")), price: N(V("ns")), ppc: N(V("npc")) || 12, opening: 0, low: 5 });
+    log("Product " + V("np"));
+  });
+}
+function addR() {
+  return __async(this, null, function* () {
+    const q = N(V("rq")), p = pr(V("rp"));
+    if (q <= 0) return alert("Enter pieces.");
+    const t = V("rt");
+    if (t === "damage" && q > stock(p)) return alert("More than available stock.");
+    if (t === "return" && !V("rc")) return alert("Choose the customer for a return.");
+    yield db.collection("returns").add({ pid: p.id, type: t, pcs: q, cid: V("rc"), value: V("rv") ? N(V("rv")) : q * p.price / PP(p), cpp: p.cost / PP(p), date: V("rd") || T(), by: ME });
+    log(`${t} ${q} pcs ${p.name}`);
+  });
+}
+function addB() {
+  return __async(this, null, function* () {
+    const p = pr(V("bp")), c = N(V("bc"));
+    if (!p || c <= 0) return alert("Choose product and cartons.");
+    yield db.collection("purchases").add({ date: V("bd") || T(), sid: V("bs"), pid: p.id, c, k: N(V("bk")) || p.cost, paid: N(V("bpd")), by: ME });
+    log(`Purchase ${c} ctn ${p.name}`);
+  });
+}
+function addS() {
+  return __async(this, null, function* () {
+    if (!V("sn")) return;
+    yield db.collection("suppliers").add({ name: V("sn"), phone: V("sp") });
+    log("Supplier " + V("sn"));
+  });
+}
+function addE() {
+  return __async(this, null, function* () {
+    if (N(V("ea")) <= 0) return alert("Enter amount");
+    yield db.collection("expenses").add({ date: V("ed") || T(), cat: V("ec"), amt: N(V("ea")), note: V("en"), by: ME });
+    log("Expense " + R(N(V("ea"))));
+  });
+}
+function save(name, data, type) {
+  return __async(this, null, function* () {
+    const dl = yield getDL();
+    if (!dl) return alert("Downloads unavailable here.");
+    try {
+      yield dl.save({ filename: name, data: new Blob([data], { type }) });
+    } catch (e) {
+    }
+  });
+}
+function backup() {
+  const o = { app: "diamond-home-care", at: (/* @__PURE__ */ new Date()).toISOString(), data: __spreadValues({}, D) };
+  delete o.data.audit;
+  save("diamond-backup-" + T() + ".json", JSON.stringify(o), "application/json");
+  log("Backup exported");
+}
+function csv(k) {
+  const a = D[k];
+  if (!a.length) return alert("No records.");
+  const h = [...new Set(a.flatMap((r) => Object.keys(r)))];
+  save(k + "-" + T() + ".csv", [h.join(","), ...a.map((r) => h.map((c) => {
+    var _a;
+    return '"' + String(typeof r[c] === "object" ? JSON.stringify(r[c]) : (_a = r[c]) != null ? _a : "").replace(/"/g, '""') + '"';
+  }).join(","))].join("\n"), "text/csv");
+}
+function restore(f) {
+  return __async(this, null, function* () {
+    if (!f || !guard()) return;
+    if (!(yield ask("Restore will add/overwrite records from this file. Continue?"))) return;
+    try {
+      const o = JSON.parse(yield f.text());
+      let n = 0;
+      for (const k of K) for (const r of o.data[k] || []) {
+        const _a = r, { id } = _a, x = __objRest(_a, ["id"]);
+        yield db.doc(k + "/" + id).set(x);
+        n++;
+      }
+      log("Restored " + n + " records");
+      alert("Restored " + n + " records.");
+    } catch (e) {
+      alert("Invalid backup file.");
+    }
+  });
+}
+let LOCAL = false;
+function localDB() {
+  const KEY = "dhc_db";
+  let data = {};
+  try {
+    data = JSON.parse(localStorage.getItem(KEY) || "{}");
+  } catch (e) {
+  }
+  const subs = [], save2 = () => {
+    try {
+      localStorage.setItem(KEY, JSON.stringify(data));
+    } catch (e) {
+    }
+  }, col = (n) => data[n] || (data[n] = {}), snap = (n) => {
+    const o = col(n), docs = Object.keys(o).map((id) => ({ id, exists: true, data: () => __spreadValues({}, o[id]) }));
+    return { docs, size: docs.length, empty: !docs.length };
+  }, notify = (n) => subs.filter((x) => x.n === n).forEach((x) => x.f(snap(n)));
+  const dref = (p) => {
+    const [n, id] = p.split("/");
+    return { id, path: p, get() {
+      return __async(this, null, function* () {
+        const v = col(n)[id];
+        return { id, exists: !!v, data: () => v && __spreadValues({}, v) };
+      });
+    }, set(v) {
+      return __async(this, null, function* () {
+        col(n)[id] = v;
+        save2();
+        notify(n);
+      });
+    }, update(v) {
+      return __async(this, null, function* () {
+        col(n)[id] = __spreadValues(__spreadValues({}, col(n)[id]), v);
+        save2();
+        notify(n);
+      });
+    }, delete() {
+      return __async(this, null, function* () {
+        delete col(n)[id];
+        save2();
+        notify(n);
+      });
+    } };
+  };
+  return { doc: dref, collection: (n) => ({ add(v) {
+    return __async(this, null, function* () {
+      const id = "l" + Date.now().toString(36) + Math.random().toString(36).slice(2, 6);
+      col(n)[id] = v;
+      save2();
+      notify(n);
+      return dref(n + "/" + id);
+    });
+  }, onSnapshot(f) {
+    subs.push({ n, f });
+    setTimeout(() => f(snap(n)), 0);
+    return () => {
+    };
+  } }), _empty: () => !Object.keys(col("products")).length };
+}
+const getDL = () => __async(null, null, function* () {
+  return { save: (_0) => __async(null, [_0], function* ({ filename, data }) {
+    const b = data instanceof Blob ? data : new Blob([data]), a = document.createElement("a");
+    a.href = URL.createObjectURL(b);
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+  }) };
+});
+const SEED = { bleach: ["Bleach", "", 146, 480, 12], harpic500: ["Harpic 500 ml", "500 ml", 840, 1200, 12], harpic250: ["Harpic 250 ml", "250 ml", 900, 1260, 18], sweep500: ["Sweep 500 ml", "500 ml", 146, 480, 12], dish500: ["Dishwash 500 ml", "500 ml", 360, 1560, 12], dish250: ["Dishwash 250 ml", "250 ml", 240, 840, 12], drain500: ["Drain Opener 500 ml", "500 ml", 600, 960, 12] };
+function boot() {
+  return __async(this, null, function* () {
+    var _a;
+    try {
+      db = yield claude.use("db");
+      user = yield claude.use("user");
+    } catch (e) {
+    }
+    if (!db) {
+      LOCAL = true;
+      db = localDB();
+      ME = "Owner";
+      if (db._empty()) for (const k in SEED) {
+        const v = SEED[k];
+        yield db.doc("products/" + k).set({ name: v[0], size: v[1], cost: v[2], price: v[3], ppc: v[4], opening: 0, low: 5 });
+      }
+    }
+    if (!db) {
+      $("#gate").innerHTML = "<h2>Please sign in to claude.ai to open Diamond Home Care. Open this link inside the Claude app (Artifacts) or in Safari/Chrome while signed in.</h2>";
+      return;
+    }
+    ADMIN = LOCAL || ((_a = user == null ? void 0 : user.canEdit()) != null ? _a : false);
+    try {
+      ME = (yield user.me()).name || "user";
+    } catch (e) {
+    }
+    K.forEach((k) => db.collection(k).onSnapshot((s) => {
+      D[k] = s.docs.map((d) => __spreadValues({ id: d.id }, d.data()));
+      const a = document.activeElement;
+      if (!a || !/INPUT|SELECT|TEXTAREA/.test(a.tagName)) render();
+    }));
+    render();
+  });
+}
+const AK = "dhc_auth", FK = "dhc_fail";
+function sha(str) {
+  const K2 = [], H = [];
+  let c = 0;
+  for (let n = 2; c < 64; n++) {
+    let ok = 1;
+    for (let i = 2; i * i <= n; i++) if (n % i == 0) {
+      ok = 0;
+      break;
+    }
+    if (ok) {
+      if (c < 8) H[c] = Math.pow(n, 0.5) * 4294967296 | 0;
+      K2[c] = Math.pow(n, 1 / 3) * 4294967296 | 0;
+      c++;
+    }
+  }
+  const m = unescape(encodeURIComponent(str)), bits = m.length * 8;
+  let a = m + "\x80";
+  while (a.length % 64 - 56) a += "\0";
+  const w = [];
+  for (let i = 0; i < a.length; i++) w[i >> 2] |= a.charCodeAt(i) << (3 - i) % 4 * 8;
+  w.push(Math.floor(bits / 4294967296), bits | 0);
+  const rr = (x, n) => x >>> n | x << 32 - n;
+  let h = H.slice(0, 8);
+  for (let j = 0; j < w.length; j += 16) {
+    const x = w.slice(j, j + 16);
+    for (let i = 16; i < 64; i++) {
+      const s0 = rr(x[i - 15], 7) ^ rr(x[i - 15], 18) ^ x[i - 15] >>> 3, s1 = rr(x[i - 2], 17) ^ rr(x[i - 2], 19) ^ x[i - 2] >>> 10;
+      x[i] = x[i - 16] + s0 + x[i - 7] + s1 | 0;
+    }
+    let [A, B, C, D2, E2, F, G, Hh] = h;
+    for (let i = 0; i < 64; i++) {
+      const t1 = Hh + (rr(E2, 6) ^ rr(E2, 11) ^ rr(E2, 25)) + (E2 & F ^ ~E2 & G) + K2[i] + x[i] | 0, t2 = (rr(A, 2) ^ rr(A, 13) ^ rr(A, 22)) + (A & B ^ A & C ^ B & C) | 0;
+      Hh = G;
+      G = F;
+      F = E2;
+      E2 = D2 + t1 | 0;
+      D2 = C;
+      C = B;
+      B = A;
+      A = t1 + t2 | 0;
+    }
+    h = [A, B, C, D2, E2, F, G, Hh].map((v, i) => v + h[i] | 0);
+  }
+  return h.map((v) => ("0000000" + (v >>> 0).toString(16)).slice(-8)).join("");
+}
+const rnd = (n) => {
+  const a = new Uint8Array(n);
+  if (window.crypto && crypto.getRandomValues) crypto.getRandomValues(a);
+  else for (let i = 0; i < n; i++) a[i] = Math.floor(Math.random() * 256);
+  return [...a].map((x) => x.toString(16).padStart(2, "0")).join("");
+};
+const hp = (u, p, salt) => {
+  let h = salt + "|" + u + "|" + p;
+  for (let i = 0; i < 4e3; i++) h = sha(h + salt);
+  return h;
+};
+const rcn = (c) => String(c).toUpperCase().replace(/[^A-Z0-9]/g, "");
+const AUTH = { get() {
+  try {
+    return JSON.parse(localStorage.getItem(AK) || "null");
+  } catch (e) {
+    return null;
+  }
+}, set(o) {
+  localStorage.setItem(AK, JSON.stringify(o));
+} };
+function mkAuth(u, pw, idle) {
+  const salt = rnd(16), code = rnd(8).toUpperCase().match(/.{4}/g).join("-"), rs = rnd(16);
+  u = u.trim().toLowerCase();
+  return { code, a: { u, salt, h: hp(u, pw, salt), rs, rh: hp(u, rcn(code), rs), idle: idle != null ? idle : 30 } };
+}
+const lockUI = (h) => {
+  $("#lock").onkeydown = (e) => {
+    if (e.key === "Enter") {
+      const b = $("#lock button:not(.s):not(.lk)");
+      if (b) b.click();
+    }
+  };
+  $("#lock").style.display = "flex";
+  $("#lock").innerHTML = '<div class="lb"><div class="lbl"><svg width="54" height="54" viewBox="0 0 48 48"><defs><linearGradient id="lg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#d9f0ff"/><stop offset="1" stop-color="#2f8fe8"/></linearGradient></defs><path d="M12 5h24l9 12-21 27L3 17z" fill="url(#lg2)" stroke="#8fb2e6" stroke-width="1.5"/><path d="M3 17h42M17 5l-5 12 12 27 12-27-5-12" fill="none" stroke="#fff" stroke-opacity=".8"/></svg><b>DIAMOND</b><small>HOME CARE PRODUCTS</small></div>' + h + "</div>";
+};
+const ERR = (m) => {
+  const e = $("#lerr");
+  if (e) e.textContent = m || "";
+};
+const unlock = () => {
+  try {
+    sessionStorage.setItem("dhc_ok", "1");
+  } catch (e) {
+  }
+  $("#lock").style.display = "none";
+  $("#lock").innerHTML = "";
+  startIdle();
+  boot();
+};
+function setupUI() {
+  lockUI('<h2>Create your login</h2><p class="note" style="text-align:center">First time setup. Your existing data is kept as it is.</p><label>Username</label><input id="lu" autocomplete="username" autocapitalize="none" autocorrect="off" spellcheck="false"><label>Password (min 6 characters)</label><input id="lp" type="password" autocomplete="new-password"><label>Confirm password</label><input id="lp2" type="password" autocomplete="new-password"><div class="er" id="lerr"></div><button onclick="doSetup()">Create login</button>');
+  $("#lu").focus();
+}
+function doSetup() {
+  const u = V("lu").trim(), p = V("lp");
+  if (u.length < 3) return ERR("Username must be at least 3 characters.");
+  if (p.length < 6) return ERR("Password must be at least 6 characters.");
+  if (p !== V("lp2")) return ERR("Passwords do not match.");
+  const r = mkAuth(u, p);
+  AUTH.set(r.a);
+  recoveryUI(r.code);
+}
+function recoveryUI(code) {
+  lockUI('<h2>Your recovery code</h2><p class="note" style="text-align:center">Write this down or save it. It is the ONLY way to reset a forgotten password. It will not be shown again.</p><div class="rc" id="rcode">' + code + `</div><button class="s" onclick="saveRC('` + code + `')">\u2B07 Save as text file</button><button onclick="unlock()">I have saved it \u2013 continue</button>`);
+}
+function saveRC(c) {
+  var _a;
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(new Blob(["Diamond Home Care recovery code: " + c + "\nUsername: " + (((_a = AUTH.get()) == null ? void 0 : _a.u) || "") + "\nKeep this file private."], { type: "text/plain" }));
+  a.download = "diamond-recovery-code.txt";
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+}
+function loginUI() {
+  lockUI('<h2>Sign in</h2><label>Username</label><input id="lu" autocomplete="username" autocapitalize="none" autocorrect="off" spellcheck="false"><label>Password</label><input id="lp" type="password" autocomplete="current-password"><div class="er" id="lerr"></div><button onclick="doLogin()">Sign in</button><button class="lk" onclick="forgotUI()">Forgot password?</button>');
+  $("#lu").focus();
+}
+function failInfo() {
+  try {
+    return JSON.parse(localStorage.getItem(FK) || '{"n":0,"t":0}');
+  } catch (e) {
+    return { n: 0, t: 0 };
+  }
+}
+function bad() {
+  const f = failInfo();
+  f.n++;
+  if (f.n >= 5) {
+    f.t = Date.now() + 3e4 * Math.min(f.n - 4, 10);
+  }
+  localStorage.setItem(FK, JSON.stringify(f));
+}
+function waitLeft() {
+  const f = failInfo();
+  return Math.max(0, Math.ceil((f.t - Date.now()) / 1e3));
+}
+function doLogin() {
+  const w = waitLeft();
+  if (w) return ERR("Too many attempts. Try again in " + w + " seconds.");
+  const a = AUTH.get(), u = V("lu").trim().toLowerCase();
+  if (a && u === a.u && hp(u, V("lp"), a.salt) === a.h) {
+    localStorage.removeItem(FK);
+    unlock();
+  } else {
+    bad();
+    const w2 = waitLeft();
+    ERR(w2 ? "Too many attempts. Try again in " + w2 + " seconds." : "Wrong username or password.");
+    if ($("#lp")) $("#lp").value = "";
+  }
+}
+function forgotUI() {
+  lockUI('<h2>Reset password</h2><label>Recovery code</label><input id="lc" placeholder="XXXX-XXXX-XXXX-XXXX" autocapitalize="characters" autocorrect="off" spellcheck="false"><label>New password (min 6 characters)</label><input id="lp" type="password" autocomplete="new-password"><label>Confirm new password</label><input id="lp2" type="password" autocomplete="new-password"><div class="er" id="lerr"></div><button onclick="doReset()">Reset password</button><button class="lk" onclick="loginUI()">\u2190 Back to sign in</button>');
+}
+function doReset() {
+  const w = waitLeft();
+  if (w) return ERR("Too many attempts. Try again in " + w + " seconds.");
+  const a = AUTH.get(), p = V("lp");
+  if (p.length < 6) return ERR("Password must be at least 6 characters.");
+  if (p !== V("lp2")) return ERR("Passwords do not match.");
+  if (hp(a.u, rcn(V("lc")), a.rs) !== a.rh) {
+    bad();
+    return ERR("Recovery code is not correct.");
+  }
+  localStorage.removeItem(FK);
+  const r = mkAuth(a.u, p, a.idle);
+  AUTH.set(r.a);
+  recoveryUI(r.code);
+}
+function logout() {
+  try {
+    sessionStorage.removeItem("dhc_ok");
+  } catch (e) {
+  }
+  location.reload();
+}
+let _it, _ib;
+function startIdle() {
+  var _a;
+  const m = (_a = AUTH.get()) == null ? void 0 : _a.idle;
+  clearTimeout(_it);
+  if (!m) return;
+  const r = () => {
+    var _a2;
+    clearTimeout(_it);
+    const m2 = (_a2 = AUTH.get()) == null ? void 0 : _a2.idle;
+    if (m2) _it = setTimeout(logout, m2 * 6e4);
+  };
+  if (!_ib) {
+    _ib = 1;
+    ["click", "keydown", "touchstart", "mousemove"].forEach((e) => addEventListener(e, r, { passive: true }));
+  }
+  r();
+}
+function secCard() {
+  const a = AUTH.get() || {};
+  return '<br><div class="c"><b>Login security</b><p class="note">Signed in as <b>' + E(a.u) + '</b>. The lock keeps other people out of this app. Your data stays saved in this browser when you log out.</p><div class="f"><div><label>Current password</label><input id="op" type="password" autocomplete="current-password"></div><div><label>New username (optional)</label><input id="nu" value="' + E(a.u) + '"></div><div><label>New password (leave blank to keep)</label><input id="np1" type="password" autocomplete="new-password"></div><div><label>Confirm new password</label><input id="np2" type="password" autocomplete="new-password"></div><div><label>Auto-lock after inactivity</label><select id="idl">' + [[0, "Never"], [5, "5 minutes"], [15, "15 minutes"], [30, "30 minutes"], [60, "1 hour"]].map((x) => {
+    var _a;
+    return '<option value="' + x[0] + '" ' + (x[0] === ((_a = a.idle) != null ? _a : 30) ? "selected" : "") + ">" + x[1] + "</option>";
+  }).join("") + '</select></div></div><button onclick="chgAuth()">Save login settings</button> <button class="s" onclick="logout()">\u{1F512} Lock now</button></div>';
+}
+function chgAuth() {
+  const a = AUTH.get(), u = V("nu").trim().toLowerCase() || a.u, np = V("np1");
+  if (hp(a.u, V("op"), a.salt) !== a.h) return alert("Current password is wrong.");
+  if (u.length < 3) return alert("Username must be at least 3 characters.");
+  if (np && np.length < 6) return alert("New password must be at least 6 characters.");
+  if (np && np !== V("np2")) return alert("New passwords do not match.");
+  const idle = +V("idl");
+  let n;
+  if (np || u !== a.u) {
+    n = mkAuth(u, np || V("op"), idle);
+    AUTH.set(n.a);
+    ME = "Owner";
+    log("Login settings changed");
+    alert("Saved. New recovery code: " + n.code + " (write it down).");
+  } else {
+    a.idle = idle;
+    AUTH.set(a);
+    alert("Saved.");
+  }
+  startIdle();
+}
+(() => {
+  if (!AUTH.get()) return setupUI();
+  let ok = 0;
+  try {
+    ok = sessionStorage.getItem("dhc_ok") === "1";
+  } catch (e) {
+  }
+  if (ok) {
+    $("#lock").style.display = "none";
+    $("#lock").innerHTML = "";
+    startIdle();
+    boot();
+  } else loginUI();
+})();
+</script><script>if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('sw.js').catch(function(){})})}</script></body></html>
